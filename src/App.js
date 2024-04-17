@@ -1,6 +1,5 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import React, {useState} from 'react';
 import useMyhook from './myhook';
 
 function App () {
@@ -8,6 +7,12 @@ function App () {
   const [name, setName] = useState ('');
   const [gender, setGender] = useState ('');
   const {num} = useMyhook();
+
+  const [studentList, setStudentList] = useState([]);
+
+  useEffect(() => {
+    setStudentList((prev) => [...prev, {name: 'isa', className: 'JSS 1'}]);
+  }, []);
 
 
   const sum = (a, b) => {
