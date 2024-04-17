@@ -15,6 +15,9 @@ function App () {
   }, []);
 
 
+  useEffect(() => {
+    console.log({ studentList });
+  }, [])
   const sum = (a, b) => {
     const rs = a - 10;
     const callbackRes = b (rs);
