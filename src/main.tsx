@@ -1,7 +1,7 @@
-import Dashboard from 'pages/dashboard';
+import Dashboard from 'dashboard';
 import { StudentProfile } from 'pages/student/student-profile';
 import Students from 'pages/student/students';
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Link, Navigate, RouterProvider } from 'react-router-dom';
 
 const UserAuth = ({ component }: { component: React.ReactNode }) => {
   const isUserLoggin = true;
@@ -13,7 +13,12 @@ const Login = () => {
 };
 
 const Course = () => {
-  return <h1>This is Courses page</h1>;
+  return (
+    <>
+      <Link to="/student">Student</Link>
+      <h1>This is Courses page</h1>
+    </>
+  );
 };
 
 const Student = () => {
@@ -25,19 +30,22 @@ export const Main = () => {
     {
       path: '/',
       Component: Dashboard,
+      children: [
+        {
+          path: '/login',
+          element: <Login />
+        },
+        {
+          path: '/course',
+          element: <UserAuth component={<Course />} />
+        },
+        {
+          path: '/student',
+          element: <UserAuth component={<Student />} />
+        },
+      ]
     },
-    {
-      path: '/login',
-      element: <Login />
-    },
-    {
-      path: '/course',
-      element: <UserAuth component={<Course />} />
-    },
-    {
-      path: '/student',
-      element: <UserAuth component={<Student />} />
-    },
+    
     {
       path: '/students',
       element: <UserAuth component={<Students />} />,
@@ -49,20 +57,8 @@ export const Main = () => {
       ],
     },
   ]);
-
+   
   return (
-    // <RouterProvider router={routes} />
-    // ### SPA S I N G L E - P A G E - A P L I C A T I O N ###/
-
     <RouterProvider router={routes} />
-
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/home" element={<Home />} />
-    //     <Route path="/course" Component={Course} />
-    //     <Route path="/student" Component={Student} />
-    //   </Routes>
-    // </BrowserRouter>
   );
 };
