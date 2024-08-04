@@ -1,6 +1,6 @@
 
 export const StudentProfile = () => {
   return (
-    <div>Student Data</div>
+    <div>Student Profile here</div>
   )
 }

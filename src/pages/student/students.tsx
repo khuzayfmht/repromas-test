@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
 interface StudentType {
   name: string;
@@ -20,12 +21,13 @@ const Students = () => {
 
     setStudentLis((prev) => [...prev, student]);
   };
-
+  
   console.log({ studetList });
 
   return (
     <div>
       <button onClick={addStudentToList}>Add Student</button>
+      <Outlet />
       {studetList.length < 1 ? (
         <h1>No recorde</h1>
       ) : (
@@ -50,6 +52,8 @@ const Students = () => {
           </tbody>
         </table>
       )}
+
+     
     </div>
   );
 };

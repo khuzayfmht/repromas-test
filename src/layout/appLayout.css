@@ -1,0 +1,21 @@
+.main-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    background-color: #dfe8f7;
+
+    /* layout desing*/
+    display: grid;
+    grid-template-columns: 20vw 1fr;
+}
+
+.side-bar {
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.main-content {
+    border: 1px solid black;
+    height: 100vh;
+}
