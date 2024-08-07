@@ -1,3 +1,4 @@
+import React from 'react';
 import Dashboard from 'dashboard';
 import { StudentProfile } from 'pages/student/student-profile';
 import Students from 'pages/student/students';

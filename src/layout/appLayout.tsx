@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
 import './appLayout.css';
+import React from 'react';
 
 type AppLaypoutProps = {
   children?: ReactNode;
