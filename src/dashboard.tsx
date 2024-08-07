@@ -6,7 +6,6 @@ const Dashboard = () => {
     <>
       <AppLayout>
         <Outlet />
-        <div></div>
       </AppLayout>
     </>
   );

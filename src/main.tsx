@@ -21,9 +21,9 @@ const Course = () => {
   );
 };
 
-const Student = () => {
-  return <h1>This is student page</h1>;
-};
+// const Student = () => {
+//   return <h1>This is student page</h1>;
+// };
 
 export const Main = () => {
   const routes = createBrowserRouter([
