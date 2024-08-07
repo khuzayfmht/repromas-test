@@ -41,7 +41,7 @@ export const Main = () => {
         },
         {
           path: '/student',
-          element: <UserAuth component={<Student />} />
+          element: <UserAuth component={<Students />} />
         },
       ]
     },

@@ -1,21 +1,49 @@
+* {
+    color: #fff;
+    padding: 0;
+}
 .main-container {
+
     width: 100%;
     height: auto;
     min-height: 100vh;
 
-    background-color: #dfe8f7;
+    background-color: #23262b;
 
     /* layout desing*/
     display: grid;
     grid-template-columns: 20vw 1fr;
+    grid-gap: 10px;
 }
 
 .side-bar {
-    border: 1px solid black;
-    height: 100vh;
+    border: 1px dashed #fff;
+    height: calc(100vh - 20px);
 }
 
 .main-content {
-    border: 1px solid black;
-    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px dashed #fff;
+    height: 120vh;
+    padding: 10px;
+}
+
+.page-header {
+    border: 1px dashed #fff;
+    padding: 10px;
+}
+
+.page-body {
+    border: 1px dashed #fff;
+    padding: 10px;
+}
+
+.page-footer {
+    position: fixed;
+    border: 1px dashed #fff;
+    padding: 10px;
+    bottom: 0;
 }

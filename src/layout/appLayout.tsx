@@ -14,9 +14,9 @@ const AppLayout: FC<AppLaypoutProps> = ({ children }) => {
       </div>
       {/* Main Content: Header, Body and Footer */}
       <div className="main-content">
-        <div>Header</div>
-        <div>{children}</div>
-        <div>footer</div>
+        <div className='page-header'>Header</div>
+        <div className='page-body'>{children}</div>
+        <div className='page-footer'>footer</div>
       </div>
 
     </div>
